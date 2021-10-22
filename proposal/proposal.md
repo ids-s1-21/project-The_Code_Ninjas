@@ -1,6 +1,6 @@
 Project proposal
 ================
-Team name
+The Code Ninjas
 
 ``` r
 library(tidyverse)
