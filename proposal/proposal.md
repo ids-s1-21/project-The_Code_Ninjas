@@ -1,4 +1,4 @@
-Project proposal
+The Big-Mac Index - Project Proposal
 ================
 The Code Ninjas
 

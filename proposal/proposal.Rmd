@@ -1,5 +1,5 @@
 ---
-title: "Project proposal"
+title: "The Big-Mac Index - Project Proposal"
 author: "The Code Ninjas"
 output: github_document
 ---
