@@ -24,7 +24,8 @@ local currency, local currency units per dollar, price of Big Mac in
 dollars, raw index relative to the (US dollar, Euro, British pound,
 Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted
 price of a Big-Mac in dollars, and adjusted index relative to the (US
-dollar, Euro, British pound, Japanese yen, Chinese yuan).
+dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row
+represents a country at a specific time (year-month-date).
 
 ## 2. Data
 
