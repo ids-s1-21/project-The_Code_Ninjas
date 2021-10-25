@@ -7,11 +7,24 @@ library(tidyverse)
 library(broom)
 ```
 
-*For instructions on what each section should include, please see the
-[project page](https://idsed.digital/assessments/project/#proposal) on
-the course website. Remove this text when completing your proposal*.
-
 ## 1. Introduction
+
+In this project, we are going to measure the purchasing power parity
+also known as PPP between countries, and to do this, we are going to use
+the “Big-mac Index” data.
+
+The Big-mac index tells us approximately how many MacDonald’s Big Macs
+can be bought in different places with the same amount of money. The
+data survey is created by ‘The Economist’ in 1986 and collected from
+areas worldwide.
+
+In this dataset, there are 1,386 observations and 19 variables; date,
+country code, country name, currency code, price of the big-mac in the
+local currency, local currency units per dollar, price of Big Mac in
+dollars, raw index relative to the (US dollar, Euro, British pound,
+Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted
+price of a Big-Mac in dollars, and adjusted index relative to the (US
+dollar, Euro, British pound, Japanese yen, Chinese yuan).
 
 ## 2. Data
 
