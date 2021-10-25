@@ -19,7 +19,7 @@ data survey is created by ‘The Economist’ in 1986 and collected from
 areas worldwide.
 
 In this dataset, there are 1,386 observations and 19 variables; date,
-country code, country name, currency code, price of the big-mac in the
+country code, currency code, country name, price of the big-mac in the
 local currency, local currency units per dollar, price of Big Mac in
 dollars, raw index relative to the (US dollar, Euro, British pound,
 Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted
