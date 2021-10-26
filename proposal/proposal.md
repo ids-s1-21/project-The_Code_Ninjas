@@ -27,6 +27,10 @@ price of a Big-Mac in dollars, and adjusted index relative to the (US
 dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row
 represents a country at a specific time (year-month-date).
 
+The Big Mac prices are from McDonald’s, and the exchange rates are from
+Thomson Reuters. The GDP per person data is from the IMF World Economic
+Outlook reports.
+
 ## 2. Data
 
 ## 3. Data analysis plan
