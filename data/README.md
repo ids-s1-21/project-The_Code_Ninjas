@@ -27,3 +27,7 @@ using the following format.
 - `JPY_adjusted`: Adjusted index, relative to the Japanese yen
 - `CNY_adjusted`: Adjusted index, relative to the Chinese yuan
 - ...
+
+
+
+

@@ -21,6 +21,11 @@ The Big Mac prices are from McDonald’s, and the exchange rates are from Thomso
 
 ## 2. Data
 
+```{r glimpse}
+
+glimpse(big_mac_)
+
+```
 
 
 ## 3. Data analysis plan
