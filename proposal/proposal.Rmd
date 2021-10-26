@@ -24,7 +24,7 @@ The Big Mac prices are from McDonald’s, and the exchange rates are from Thomso
 
 ```{r glimpse}
 
-glimpse(big_mac_)
+glimpse(big_mac_full_index)
 
 ```
 
