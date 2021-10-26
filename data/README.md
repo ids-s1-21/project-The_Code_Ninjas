@@ -5,7 +5,7 @@ Place data file(s) in this folder.
 Then, include codebooks (variables, and their descriptions) for your data file(s)
 using the following format.
 
-## name of data file
+## big-mac.csv
 
 - `date`: Date of observation
 - `iso_a3`: Three-character country code

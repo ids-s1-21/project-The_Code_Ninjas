@@ -35,6 +35,22 @@ Outlook reports.
 
 ## 3. Data analysis plan
 
+Variables:
+
+We aim to use a number of variables from the data set to answer our
+question, including GDP\_dollar against respective countries and
+calculated PPP.
+
+Visualisations:
+
+At this point we believe the best visualisation to demonstrate our
+findings will be a bar chart which plots GDP changes, as the countries
+act as categorical variables which are best placed in this form. To
+observe further variables we may use a segmented bar plot with the
+argument position = “fill” to expand the bars and allow easier
+comparisons of proportions. To compare years and countries we may facet
+the bar plots too.
+
 Statistical methods:
 
 The main use of the big mac index is to calculate PPP using the relative
