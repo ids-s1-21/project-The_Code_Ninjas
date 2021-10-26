@@ -12,8 +12,8 @@ library(broom)
 Our research question is “What is Purchasing Power Parity (PPP) and how
 has it changed over the years across countries?”
 
-To do this, we are going to use the “Big-mac Index” data and this tells
-us approximately how many MacDonald’s Big Macs can be bought in
+To find this out, we are going to use the “Big-mac Index” data and this
+tells us approximately how many MacDonald’s Big Macs can be bought in
 different places with the same amount of money. The data survey is
 created by ‘The Economist’ in 1986 and collected from areas worldwide.
 
