@@ -1,9 +1,6 @@
 # data
 
-Place data file(s) in this folder.
-
-Then, include codebooks (variables, and their descriptions) for your data file(s)
-using the following format.
+The data has 1,386 observations (rows) and 19 variables (columns).
 
 ## big-mac.csv
 
