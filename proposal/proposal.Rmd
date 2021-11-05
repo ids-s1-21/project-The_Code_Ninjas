@@ -23,6 +23,7 @@ The Big Mac prices are from McDonald’s, and the exchange rates are from Thomso
 ## 2. Data
 
 ```{r glimpse}
+big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1/output-data/big-mac-full-index.csv")
 
 glimpse(big_mac_full_index)
 
