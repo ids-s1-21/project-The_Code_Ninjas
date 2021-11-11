@@ -9,14 +9,13 @@ library(broom)
 
 ## 1. Introduction
 
-In this project, we are going to measure the purchasing power parity
-also known as PPP between countries, and to do this, we are going to use
-the “Big-mac Index” data.
+Our research question is “What is Purchasing Power Parity (PPP) and how
+has it changed over the years across countries?”
 
-The Big-mac index tells us approximately how many MacDonald’s Big Macs
-can be bought in different places with the same amount of money. The
-data survey is created by ‘The Economist’ in 1986 and collected from
-areas worldwide.
+To find this out, we are going to use the “Big-mac Index” data and this
+tells us approximately how many MacDonald’s Big Macs can be bought in
+different places with the same amount of money. The data survey is
+created by ‘The Economist’ in 1986 and collected from areas worldwide.
 
 In this dataset, there are 1,386 observations and 19 variables; date,
 country code, currency code, country name, price of the big-mac in the
@@ -25,9 +24,42 @@ dollars, raw index relative to the (US dollar, Euro, British pound,
 Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted
 price of a Big-Mac in dollars, and adjusted index relative to the (US
 dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row
-represents a country at a specific time (year-month-date).
+represents a country at a specific time (year-month-date). The data is
+accountable for the years 2000-2020.
+
+The Big Mac prices are from McDonald’s, and the exchange rates are from
+Thomson Reuters. The GDP per person data is from the IMF World Economic
+Outlook reports.
 
 ## 2. Data
+
+``` r
+big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1/output-data/big-mac-full-index.csv")
+
+glimpse(big_mac_full_index)
+```
+
+    ## Rows: 1,520
+    ## Columns: 19
+    ## $ date          <chr> "2000-04-01", "2000-04-01", "2000-04-01", "2000-04-01", …
+    ## $ iso_a3        <chr> "ARG", "AUS", "BRA", "CAN", "CHE", "CHL", "CHN", "CZE", …
+    ## $ currency_code <chr> "ARS", "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", …
+    ## $ name          <chr> "Argentina", "Australia", "Brazil", "Canada", "Switzerla…
+    ## $ local_price   <dbl> 2.50, 2.59, 2.95, 2.85, 5.90, 1260.00, 9.90, 54.37, 24.7…
+    ## $ dollar_ex     <dbl> 1.0000000, 1.6800000, 1.7900000, 1.4700000, 1.7000000, 5…
+    ## $ dollar_price  <dbl> 2.500000, 1.541667, 1.648045, 1.938776, 3.470588, 2.4513…
+    ## $ USD_raw       <dbl> -0.00398, -0.38579, -0.34341, -0.22758, 0.38270, -0.0233…
+    ## $ EUR_raw       <dbl> 0.05007, -0.35246, -0.30778, -0.18566, 0.45774, 0.02964,…
+    ## $ GBP_raw       <dbl> -0.16722, -0.48645, -0.45102, -0.35417, 0.15609, -0.1834…
+    ## $ JPY_raw       <dbl> -0.09864, -0.44416, -0.40581, -0.30099, 0.25130, -0.1161…
+    ## $ CNY_raw       <dbl> 1.09091, 0.28939, 0.37836, 0.62152, 1.90267, 1.05023, 0.…
+    ## $ GDP_dollar    <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ adj_price     <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ USD_adjusted  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ EUR_adjusted  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ GBP_adjusted  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ JPY_adjusted  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ CNY_adjusted  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
 
 ## 3. Data analysis plan
 
