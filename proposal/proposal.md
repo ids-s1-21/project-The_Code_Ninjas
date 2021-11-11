@@ -70,5 +70,5 @@ analyse is the difference in GDP between different countries post and
 pre-Covid then getting a percentage change, the assumption is that GDP
 will have decreased in most countries after Covid compared to the year
 before the pandemic.This will also use the gdp\_dollar variable. There
-will also be signficant variations in exchange rates after the pandemic
+will also be significant variations in exchange rates after the pandemic
 also which will be analysed in the project.
