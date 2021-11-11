@@ -104,3 +104,35 @@ will have decreased in most countries after Covid compared to the year
 before the pandemic.This will also use the gdp\_dollar variable. There
 will also be significant variations in exchange rates after the pandemic
 also which will be analysed in the project.
+
+Preliminary Exploratory Analysis:
+
+To get an initial idea of the exchange rates in high GDP vs low GDP
+countries we can compare the average dollar price of a Big Mac over the
+years for a high GDP country like Britain versus a lower GDP country
+like Indonesia.
+
+``` r
+big_mac_full_index %>%
+  filter(name == "Britain") %>%
+  summarise(mean_dollar = mean(dollar_price))
+```
+
+    ##   mean_dollar
+    ## 1    3.947897
+
+``` r
+big_mac_full_index %>%
+  filter(name == "Indonesia") %>%
+  summarise(mean_dollar = mean(dollar_price))
+```
+
+    ##   mean_dollar
+    ## 1    2.180917
+
+We can see that the mean dollar price over the years for a Big Mac in
+Britain was $3.95 versus $2.18 in Indonesia. This suggests that over the
+21 years of data recording, on average you pay more for a Big Mac in
+Britain than in Indonesia. This is obviously just a small glimpse into a
+much broader situation, and other countries over time need to be
+explored, but it is an interesting statistic to consider.
