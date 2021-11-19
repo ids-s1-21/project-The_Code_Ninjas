@@ -66,7 +66,7 @@ glimpse(big_mac_full_index)
 Variables:
 
 We aim to use a number of variables from the data set to answer our
-question, including GDP\_dollar against respective countries and
+question, including GDP_dollar against respective countries and
 calculated PPP.
 
 Visualisations:
@@ -96,14 +96,14 @@ Hypothesized results:
 
 One question we are going to try and answer is “Is Purchasing Power
 Parity higher in High GDP countries compared to low GDP countries” This
-will be done by using the “gdp\_dollar” variable along with the
-countries respective exchange rate. Another possible question we could
-analyse is the difference in GDP between different countries post and
-pre-Covid then getting a percentage change, the assumption is that GDP
-will have decreased in most countries after Covid compared to the year
-before the pandemic.This will also use the gdp\_dollar variable. There
-will also be significant variations in exchange rates after the pandemic
-also which will be analysed in the project.
+will be done by using the “gdp_dollar” variable along with the countries
+respective exchange rate. Another possible question we could analyse is
+the difference in GDP between different countries post and pre-Covid
+then getting a percentage change, the assumption is that GDP will have
+decreased in most countries after Covid compared to the year before the
+pandemic.This will also use the gdp_dollar variable. There will also be
+significant variations in exchange rates after the pandemic also which
+will be analysed in the project.
 
 Preliminary Exploratory Analysis:
 
