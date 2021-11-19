@@ -1,6 +1,6 @@
 ---
-title: Project title
-author: by Team name
+title: The Big-mac Index and the Purchasing Power Parity
+author: The Code Ninjas
 output: github_document
 ---
 
