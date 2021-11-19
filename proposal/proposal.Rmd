@@ -2,6 +2,8 @@
 title: "The Big-Mac Index - Project Proposal"
 author: "The Code Ninjas"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r load-packages, message = FALSE}
