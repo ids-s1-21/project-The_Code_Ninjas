@@ -1,6 +1,6 @@
 ---
 title: "The Big-mac Index"
-subtitle: <font size='6'>Presentation subtitle (if any)</font>
+subtitle: <font size='6'> Purchasing Power Parity (if any)</font>
 author: <font size='8'> The Code Ninjas <br> Tulie, Dara, Kay Thari, Anya </font>
 institute: <font size='10'>University of Edinburgh</font>
 date: <font size = '6'>`r Sys.Date()`</font>
