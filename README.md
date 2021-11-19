@@ -1,6 +1,6 @@
-Project title
+The Big-mac Index and the Purchasing Power Parity
 ================
-by Team name
+The Code Ninjas
 
 ## Summary
 
