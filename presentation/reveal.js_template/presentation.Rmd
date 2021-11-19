@@ -1,7 +1,7 @@
 ---
-title: "Presentation title"
+title: "The Big-mac Index"
 subtitle: <font size='6'>Presentation subtitle (if any)</font>
-author: <font size='8'>Team name <br> Names of team members</font>
+author: <font size='8'> The Code Ninjas <br> Tulie, Dara, Kay Thari, Anya </font>
 institute: <font size='10'>University of Edinburgh</font>
 date: <font size = '6'>`r Sys.Date()`</font>
 output:
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```
 
 ```{r load-data, include=FALSE}
-# Load your data here
+big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1/output-data/big-mac-full-index.csv")
 ```
 
 ## A statement of the overall goal / research question {data-background-image="img/confetti.jpg"}
