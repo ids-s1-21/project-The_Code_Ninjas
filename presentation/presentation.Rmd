@@ -28,10 +28,10 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1/output-data/big-mac-full-index.csv")
 ```
 
-## <span style="color: turquoise;"> A statement of the overall goal / research question </span> {data-background-image="img/Global-Economy-4.jpg"}
-<span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </span>
+## <span style="color: turquoise;"> A statement of the overall goal / research question </span>  {data-background-image="img/Global-Economy-4.jpg"}
+<span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span>
 
-<span style="color: yellow;"> <font size='5'> Purchasing Power Parity: Compares how much a typical basket of goods in one country costs compared to that of another country. </span>
+<span style="color: yellow;"> <font size='5'> Purchasing Power Parity: Compares how much a typical basket of goods in one country costs compared to that of another country. </font> </span>
 
 # Section title
 
