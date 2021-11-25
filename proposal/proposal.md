@@ -136,3 +136,33 @@ Britain was $3.95 versus $2.18 in Indonesia. This suggests that over the
 Britain than in Indonesia. This is obviously just a small glimpse into a
 much broader situation, and other countries over time need to be
 explored, but it is an interesting statistic to consider.
+
+``` r
+big_mac_full_index %>%
+  mutate(year = str_sub(date, 1, 4)) %>%
+  group_by(year) %>%
+  ggplot(aes(x = name, y = dollar_price)) +
+  geom_line() +
+  facet_wrap(~year)
+```
+
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+    ## geom_path: Each group consists of only one observation. Do you need to adjust
+    ## the group aesthetic?
+
+![](proposal_files/figure-gfm/graph-1.png)<!-- -->
