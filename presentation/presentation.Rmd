@@ -1,3 +1,8 @@
+---
+output:
+  revealjs::revealjs_presentation: default
+  html_document: default
+---
 ----
 title: "The Big-mac Index"
 subtitle: <font size='6'> Purchasing Power Parity </font>
@@ -33,7 +38,11 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 <span style="color: yellow;"> <font size='5'> Purchasing Power Parity: Compares how much a typical basket of goods in one country costs compared to that of another country. </font> </span>
 
-# Section title
+# What is PPP?
+
+- PPP stands for Purchasing Power Parity
+- It is a measurement used in economics to compare the purchasing power of different currencies in common units. 
+- In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case. 
 
 # Hello World
 
