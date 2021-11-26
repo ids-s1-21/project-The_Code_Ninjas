@@ -47,8 +47,24 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font>
 
+---
 
-# Using reveal.js
+```{r tibble}
+dim(big_mac_full_index)
+
+ls(big_mac_full_index)
+
+```
+
+---
+
+Why Big Macs?
+
+- The Big Mac Index is an accurate way of looking at PPP in the real world. 
+
+- A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
+
+# How we are answering the question
 
 It's possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.
 
