@@ -17,7 +17,7 @@ Our research question is “What is Purchasing Power Parity (PPP) and how has it
 
 To find this out, we are going to use the “Big-mac Index” data and this tells us approximately how many MacDonald's Big Macs can be bought in different places with the same amount of money. The data survey is created by ‘The Economist’ in 1986 and collected from areas worldwide. 
 
-In this dataset, there are 1,520 observations and 19 variables; date, country code, currency code, country name, price of the big-mac in the local currency, local currency units per dollar, price of Big Mac in dollars, raw index relative to the (US dollar, Euro, British pound, Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted price of a Big-Mac in dollars, and adjusted index relative to the (US dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row represents a country at a specific time (year-month-date). The data is accountable for the years 2000-2021.
+In this dataset, there are 1,386 observations and 19 variables; date, country code, currency code, country name, price of the big-mac in the local currency, local currency units per dollar, price of Big Mac in dollars, raw index relative to the (US dollar, Euro, British pound, Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted price of a Big-Mac in dollars, and adjusted index relative to the (US dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row represents a country at a specific time (year-month-date). The data is accountable for the years 2000-2020.
 
 The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.
 
