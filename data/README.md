@@ -1,6 +1,6 @@
 # data
 
-The data has 1,386 observations (rows) and 19 variables (columns).
+The data has 1,520 observations (rows) and 19 variables (columns).
 
 ## big-mac.csv
 

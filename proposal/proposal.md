@@ -17,7 +17,7 @@ tells us approximately how many MacDonald’s Big Macs can be bought in
 different places with the same amount of money. The data survey is
 created by ‘The Economist’ in 1986 and collected from areas worldwide.
 
-In this dataset, there are 1,386 observations and 19 variables; date,
+In this dataset, there are 1,520 observations and 19 variables; date,
 country code, currency code, country name, price of the big-mac in the
 local currency, local currency units per dollar, price of Big Mac in
 dollars, raw index relative to the (US dollar, Euro, British pound,
@@ -25,7 +25,7 @@ Japanese yen, Chinese yuan), GDP per person in dollars, GDP-adjusted
 price of a Big-Mac in dollars, and adjusted index relative to the (US
 dollar, Euro, British pound, Japanese yen, Chinese yuan). Each row
 represents a country at a specific time (year-month-date). The data is
-accountable for the years 2000-2020.
+accountable for the years 2000-2021.
 
 The Big Mac prices are from McDonald’s, and the exchange rates are from
 Thomson Reuters. The GDP per person data is from the IMF World Economic
@@ -136,33 +136,3 @@ Britain was $3.95 versus $2.18 in Indonesia. This suggests that over the
 Britain than in Indonesia. This is obviously just a small glimpse into a
 much broader situation, and other countries over time need to be
 explored, but it is an interesting statistic to consider.
-
-``` r
-big_mac_full_index %>%
-  mutate(year = str_sub(date, 1, 4)) %>%
-  group_by(year) %>%
-  ggplot(aes(x = name, y = dollar_price)) +
-  geom_line() +
-  facet_wrap(~year)
-```
-
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-    ## geom_path: Each group consists of only one observation. Do you need to adjust
-    ## the group aesthetic?
-
-![](proposal_files/figure-gfm/graph-1.png)<!-- -->
