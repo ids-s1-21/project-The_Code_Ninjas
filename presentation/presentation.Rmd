@@ -1,18 +1,13 @@
 ---
-output:
-  revealjs::revealjs_presentation: default
-  html_document: default
----
-----
 title: "The Big-mac Index"
-subtitle: <font size='6'> Purchasing Power Parity </font>
-author: <font size='8'> The Code Ninjas <br> Tuilelaith, Dara, Kay Thari, Anya </font>
+subtitle: <font size='6'>Purchasing Power Parity </font>
+author: <font size='8'>The Code Ninjas <br> Tuilelaith, Dara, Kay Thari, Anya </font>
 institute: <font size='10'>University of Edinburgh</font>
 date: <font size = '6'>`r Sys.Date()`</font>
 output:
   revealjs::revealjs_presentation:
     self_contained: false
-----
+---
 
 ```{r load-packages, include = FALSE}
 # Add any additional packages you need to this chunk
@@ -36,12 +31,13 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 ## <span style="color: turquoise;"> A statement of the overall goal / research question </span>  {data-background-image="img/Global-Economy-4.jpg"}
 <span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span>
 
-
 # What is PPP?
 
+=======
+# What is Purchasing Power Parity?
 - PPP stands for Purchasing Power Parity
 - It is a measurement used in economics to compare the purchasing power of different currencies in common units. 
-- In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case. 
+- In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.
 
 # Introducing the Data
 
