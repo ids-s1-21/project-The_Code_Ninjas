@@ -38,14 +38,13 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 # The Big-mac Index Data {data-background-image="img/MacDonald.jpg"}
 
-<font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font>
+<span style="color: yellow;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
 
-<font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font>
+<span style="color: yellow;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
 
-<font size='6'>The data is accountable for the years 2000-2021.
-</font>
+<span style="color: yellow;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
 
-<font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font>
+<span style="color: yellow;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
 
 ---
 
