@@ -144,53 +144,23 @@
 <h2 data-background-image="img/Global-Economy-4.jpg"><span style="color: turquoise;"> A statement of the overall goal / research question </span></h2>
 <p><span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span></p>
 </section>
-<section id="what-is-ppp" class="title-slide slide level1">
-<h1>What is PPP?</h1>
-<p>======= # What is Purchasing Power Parity? - PPP stands for Purchasing Power Parity - It is a measurement used in economics to compare the purchasing power of different currencies in common units. - In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</p>
-</section>
-
-<section>
-<section id="introducing-the-data" class="title-slide slide level1">
-<h1>Introducing the Data</h1>
+<section id="what-is-purchasing-power-parity" class="title-slide slide level1">
+<h1>What is Purchasing Power Parity?</h1>
 <ul>
-<li><p>The Big Mac Index is data taken from The Economist</p></li>
-<li><p>Make sure to commit and push all resulting files to your GitHub repo</p></li>
+<li>PPP stands for Purchasing Power Parity</li>
+<li>It is a measurement used in economics to compare the purchasing power of different currencies in common units.</li>
+<li>In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</li>
 </ul>
 </section>
-<section class="slide level2">
 
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(big_mac_full_index)</span></code></pre></div>
-<pre><code>##  [1] &quot;adj_price&quot;     &quot;CNY_adjusted&quot;  &quot;CNY_raw&quot;       &quot;currency_code&quot;
-##  [5] &quot;date&quot;          &quot;dollar_ex&quot;     &quot;dollar_price&quot;  &quot;EUR_adjusted&quot; 
-##  [9] &quot;EUR_raw&quot;       &quot;GBP_adjusted&quot;  &quot;GBP_raw&quot;       &quot;GDP_dollar&quot;   
-## [13] &quot;iso_a3&quot;        &quot;JPY_adjusted&quot;  &quot;JPY_raw&quot;       &quot;local_price&quot;  
-## [17] &quot;name&quot;          &quot;USD_adjusted&quot;  &quot;USD_raw&quot;</code></pre>
+<section id="the-big-mac-index-data" class="title-slide slide level1">
+<h1>The Big-mac Index Data</h1>
+<p><font size='6'> The dataset consists of 1,386 observations (rows) and 19 variables (columns).</font></p>
+<p><font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></p>
+<p><font size='6'>The data is accountable for the years 2000-2020. </font></p>
+<p><font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></p>
 </section>
-<section class="slide level2">
 
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(big_mac_full_index)</span></code></pre></div>
-<pre><code>## Rows: 1,520
-## Columns: 19
-## $ date          &lt;chr&gt; &quot;2000-04-01&quot;, &quot;2000-04-01&quot;, &quot;2000-04-01&quot;, &quot;2000-04-01&quot;, …
-## $ iso_a3        &lt;chr&gt; &quot;ARG&quot;, &quot;AUS&quot;, &quot;BRA&quot;, &quot;CAN&quot;, &quot;CHE&quot;, &quot;CHL&quot;, &quot;CHN&quot;, &quot;CZE&quot;, …
-## $ currency_code &lt;chr&gt; &quot;ARS&quot;, &quot;AUD&quot;, &quot;BRL&quot;, &quot;CAD&quot;, &quot;CHF&quot;, &quot;CLP&quot;, &quot;CNY&quot;, &quot;CZK&quot;, …
-## $ name          &lt;chr&gt; &quot;Argentina&quot;, &quot;Australia&quot;, &quot;Brazil&quot;, &quot;Canada&quot;, &quot;Switzerla…
-## $ local_price   &lt;dbl&gt; 2.50, 2.59, 2.95, 2.85, 5.90, 1260.00, 9.90, 54.37, 24.7…
-## $ dollar_ex     &lt;dbl&gt; 1.0000000, 1.6800000, 1.7900000, 1.4700000, 1.7000000, 5…
-## $ dollar_price  &lt;dbl&gt; 2.500000, 1.541667, 1.648045, 1.938776, 3.470588, 2.4513…
-## $ USD_raw       &lt;dbl&gt; -0.00398, -0.38579, -0.34341, -0.22758, 0.38270, -0.0233…
-## $ EUR_raw       &lt;dbl&gt; 0.05007, -0.35246, -0.30778, -0.18566, 0.45774, 0.02964,…
-## $ GBP_raw       &lt;dbl&gt; -0.16722, -0.48645, -0.45102, -0.35417, 0.15609, -0.1834…
-## $ JPY_raw       &lt;dbl&gt; -0.09864, -0.44416, -0.40581, -0.30099, 0.25130, -0.1161…
-## $ CNY_raw       &lt;dbl&gt; 1.09091, 0.28939, 0.37836, 0.62152, 1.90267, 1.05023, 0.…
-## $ GDP_dollar    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ adj_price     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ USD_adjusted  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ EUR_adjusted  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ GBP_adjusted  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ JPY_adjusted  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ CNY_adjusted  &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
-</section></section>
 <section>
 <section id="using-reveal.js" class="title-slide slide level1">
 <h1>Using reveal.js</h1>
@@ -241,15 +211,15 @@ like this
 
 <section id="code" class="title-slide slide level1">
 <h1>Code</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a boring regression</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a boring regression</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(model)</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 5
 ##   term        estimate std.error statistic  p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
 ## 1 (Intercept)   -17.6      6.76      -2.60 1.23e- 2
 ## 2 speed           3.93     0.416      9.46 1.49e-12</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 12
 ##   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
 ##       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
