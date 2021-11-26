@@ -36,19 +36,34 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 - It is a measurement used in economics to compare the purchasing power of different currencies in common units. 
 - In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.
 
-# The Big-mac Index Data
+# The Big-mac Index Data {data-background-image="img/MacDonald.jpg"}
 
-<font size='6'> The dataset consists of 1,386 observations (rows) and 19 variables (columns).</font>
+<span style="color: yellow;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
 
-<font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font>
+<span style="color: yellow;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
 
-<font size='6'>The data is accountable for the years 2000-2020.
-</font>
+<span style="color: yellow;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
 
-<font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font>
+<span style="color: yellow;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
 
+---
 
-# Using reveal.js
+```{r tibble}
+dim(big_mac_full_index)
+
+ls(big_mac_full_index)
+
+```
+
+---
+
+Why Big Macs?
+
+- The Big Mac Index is an accurate way of looking at PPP in the real world. 
+
+- A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
+
+# How we are answering the question
 
 It's possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.
 

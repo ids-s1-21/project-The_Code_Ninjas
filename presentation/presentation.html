@@ -153,17 +153,36 @@
 </ul>
 </section>
 
-<section id="the-big-mac-index-data" class="title-slide slide level1">
-<h1>The Big-mac Index Data</h1>
-<p><font size='6'> The dataset consists of 1,386 observations (rows) and 19 variables (columns).</font></p>
-<p><font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></p>
-<p><font size='6'>The data is accountable for the years 2000-2020. </font></p>
-<p><font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></p>
-</section>
-
 <section>
-<section id="using-reveal.js" class="title-slide slide level1">
-<h1>Using reveal.js</h1>
+<section id="the-big-mac-index-data" class="title-slide slide level1" data-background-image="img/MacDonald.jpg">
+<h1 data-background-image="img/MacDonald.jpg">The Big-mac Index Data</h1>
+<p><span style="color: yellow;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span></p>
+<p><span style="color: yellow;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span></p>
+<p><span style="color: yellow;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span></p>
+<p><span style="color: yellow;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span></p>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(big_mac_full_index)</span></code></pre></div>
+<pre><code>## [1] 1520   19</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(big_mac_full_index)</span></code></pre></div>
+<pre><code>##  [1] &quot;adj_price&quot;     &quot;CNY_adjusted&quot;  &quot;CNY_raw&quot;       &quot;currency_code&quot;
+##  [5] &quot;date&quot;          &quot;dollar_ex&quot;     &quot;dollar_price&quot;  &quot;EUR_adjusted&quot; 
+##  [9] &quot;EUR_raw&quot;       &quot;GBP_adjusted&quot;  &quot;GBP_raw&quot;       &quot;GDP_dollar&quot;   
+## [13] &quot;iso_a3&quot;        &quot;JPY_adjusted&quot;  &quot;JPY_raw&quot;       &quot;local_price&quot;  
+## [17] &quot;name&quot;          &quot;USD_adjusted&quot;  &quot;USD_raw&quot;</code></pre>
+</section>
+<section class="slide level2">
+
+<p>Why Big Macs?</p>
+<ul>
+<li><p>The Big Mac Index is an accurate way of looking at PPP in the real world.</p></li>
+<li><p>A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="how-we-are-answering-the-question" class="title-slide slide level1">
+<h1>How we are answering the question</h1>
 <p>It’s possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.</p>
 <p>When presenting, you use the left/right arrows to step through the top-level (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow.</p>
 <p>(click the down key now)</p>
@@ -211,15 +230,15 @@ like this
 
 <section id="code" class="title-slide slide level1">
 <h1>Code</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a boring regression</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a boring regression</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(model)</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 5
 ##   term        estimate std.error statistic  p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
 ## 1 (Intercept)   -17.6      6.76      -2.60 1.23e- 2
 ## 2 speed           3.93     0.416      9.46 1.49e-12</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 12
 ##   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
 ##       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
