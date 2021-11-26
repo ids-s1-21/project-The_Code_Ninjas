@@ -45,6 +45,15 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 - Make sure to commit and push all resulting files to your GitHub repo
 
+---
+```{r variables}
+ls(big_mac_full_index)
+```
+---
+```{r tibble}
+glimpse(big_mac_full_index)
+```
+
 # Using reveal.js
 
 It's possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.
