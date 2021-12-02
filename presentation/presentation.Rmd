@@ -26,6 +26,7 @@ library(gifski)
 ```{r setup, include=FALSE}
 # For better figure resolution
 knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618, out.width = "80%")
+suppressWarnings(expr)
 ```
 
 ```{r load-data, include=FALSE}
@@ -181,19 +182,19 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
-animate(anim, fps = 2, renderer = gifski_renderer())
+#animate(anim, fps = 2, renderer = gifski_renderer())
 
 ```
 
 
 ## Turkey
-```{r plot-Turkey, warning=FALSE, echo=FALSE}
+```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
 bigmacTurkey <- bigmac %>%
   filter(name %in% c("Turkey"))
 
 
-ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
