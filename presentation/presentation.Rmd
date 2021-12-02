@@ -126,7 +126,7 @@ glance(model)
 # Plots
 
 
-```{r plot-gdp/usdraw, echo = FALSE, warning=FALSE, out.height="100%", fig.height=5}
+```{r plot-gdp/usdraw, echo = FALSE, warning=FALSE, out.height="100%", fig.height=5, message=FALSE}
 
 bigmac2011 <- big_mac_full_index %>%
   filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31"))
@@ -146,13 +146,15 @@ ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw, colour = na
     legend.position = "bottom"
   )
 
-linear_reg() %>%
-  set_engine("lm") %>%
-  fit(USD_raw ~ GDP_dollar, data = bigmac2011) %>%
-  tidy()
-  
+
+
+##line <- linear_reg() %>%
+  ##set_engine("lm") %>%
+  ##fit(USD_raw ~ GDP_dollar, data = bigmac2011) 
+
 
 ```
+
 
 ## Animated
 
@@ -166,12 +168,12 @@ bigmac <- big_mac_full_index %>%
 anim <- bigmac %>%  
   ggplot(data = bigmac, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
   geom_point() +
-  transition_time(readr::parse_number(year)) +
+  ##transition_time(readr::parse_number(year)) +
   labs(
     x = "GDP per person (dollars)",
     y = "Raw Index (dollars)", 
     title = "",
-    subtitle = "Through Years: {as.integer(frame_time)}",
+    ##subtitle = "Through Years: {as.integer(frame_time)}",
     fill = "Countries"
   ) +
   theme(
@@ -181,7 +183,7 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
-animate(anim, fps = 2, renderer = gifski_renderer())
+##animate(anim, fps = 2, renderer = gifski_renderer())
 
 ```
 
