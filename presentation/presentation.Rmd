@@ -65,7 +65,7 @@ Why Big Macs?
 
 - A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
 
-# How we are answering the question
+# Sub-questions and how we will answer them
 
 It's possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.
 
@@ -124,7 +124,7 @@ glance(model)
 # Plots
 
 
-```{r plot-gdp/usdraw}
+```{r plot-gdp/usdraw, echo = FALSE, warning=FALSE, out.height="100%", fig.height=5}
 
 bigmac2011 <- big_mac_full_index %>%
   filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31"))
@@ -151,7 +151,11 @@ linear_reg() %>%
   
 
 ```
-```{r plot-gdp/usdrawYRS}
+
+## Animated
+
+```{r plot-gdp/usdrawYRS, animation.hook='gifski'}
+
 big_mac_full_index$year = str_sub(big_mac_full_index$date,1,4)
 
 bigmac <- big_mac_full_index %>%
@@ -179,7 +183,9 @@ animate(anim, fps = 2, renderer = gifski_renderer())
 
 ```
 
-```{r plot-Turkey}
+
+## Turkey
+```{r plot-Turkey, warning=FALSE, echo=FALSE}
 
 bigmacTurkey <- bigmac %>%
   filter(name %in% c("Turkey"))
@@ -208,7 +214,8 @@ ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse
 
 ```
 
-```{r plot-Switzerland}
+## Switzerland
+```{r plot-Switzerland, echo=FALSE, warning=FALSE}
 
 bigmacSwitz <- bigmac %>%
   filter(name %in% c("Switzerland"))
@@ -235,7 +242,8 @@ ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(
 
 ```
 
-```{r plot-HongKong}
+## Hong Kong
+```{r plot-HongKong, echo=FALSE, warning=FALSE}
 
 bigmacHK <- bigmac %>%
   filter(name %in% c("Hong Kong"))
@@ -262,7 +270,8 @@ ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD
 
 ```
 
-```{r plot-Brazil}
+## Brazil
+```{r plot-Brazil, warning=FALSE, out.width="100%", echo=FALSE}
 
 bigmacBrazil <- bigmac %>%
   filter(name %in% c("Brazil"))
