@@ -64,7 +64,7 @@ Why Big Macs?
 
 - A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
 
-# How we are answering the question
+# Sub-questions and how we will answer them
 
 It's possible to have a horizontal sliding transition as well as nest multiple slides to create a vertical stack.
 
