@@ -36,20 +36,23 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 ## <span style="color: turquoise;"> A statement of the overall goal / research question </span>  {data-background-image="img/Global-Economy-4.jpg"}
 <span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span>
 
-# What is Purchasing Power Parity?
-- PPP stands for Purchasing Power Parity
-- It is a measurement used in economics to compare the purchasing power of different currencies in common units. 
-- In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.
+# <span style="color: yellowgreen;"> What is Purchasing Power Parity? </span> {data-background-image="img/Blue gradient.jpg"}
 
-# The Big-mac Index Data {data-background-image="img/MacDonald.jpg"}
+<span style="color: snow;"> <font size='6'> PPP stands for Purchasing Power Parity</font></span>
 
-<span style="color: whitesmoke;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
+<span style="color: snow;"> <font size='6'> It is a measurement used in economics to compare the purchasing power of different currencies in common units. </font></span>
 
-<span style="color: whitesmoke;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
+<span style="color: snow;"> <font size='6'> In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</font></span>
 
-<span style="color: whitesmoke;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
+# <span style="color: royalblue;"> The Big-mac Index Data</span> {data-background-image="img/Burger2.jpg"}
 
-<span style="color: whitesmoke;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
+<font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font>
+
+ <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font>
+
+<font size='6'>The data is accountable for the years 2000-2021. </font>
+
+<font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font>
 
 ---
 
@@ -60,13 +63,12 @@ ls(big_mac_full_index)
 
 ```
 
----
-# Why Big Macs?
 
-<span style="color: violet;"> <font size='6'> - The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
+# <span style="color: seagreen;"> Why Big Macs?</span> {data-background-image="img/Yellow gradient.jpg"}
 
-<span style="color: violet;"> <font size='6'> - A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
----
+<span style="color: darkviolet;"> <font size='6'> The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
+
+<span style="color: darkviolet;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
 
 # Sub-questions and how we will answer them
 
