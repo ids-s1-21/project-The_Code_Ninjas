@@ -146,6 +146,13 @@ anim <- bigmac %>%
 
 
 ## Turkey
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
 bigmacTurkey <- bigmac %>%
@@ -174,8 +181,17 @@ ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse
 
 
 ```
+::::
+:::
 
-## Switzerland
+## Switzerland 
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Switzerland, echo=FALSE, warning=FALSE}
 
 bigmacSwitz <- bigmac %>%
@@ -202,8 +218,17 @@ ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(
   )
 
 ```
+::::
+:::
 
 ## Hong Kong
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-HongKong, echo=FALSE, warning=FALSE}
 
 bigmacHK <- bigmac %>%
@@ -230,8 +255,17 @@ ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD
   )
 
 ```
+::::
+:::
 
 ## Brazil
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Brazil, warning=FALSE, out.width="100%", echo=FALSE}
 
 bigmacBrazil <- bigmac %>%
