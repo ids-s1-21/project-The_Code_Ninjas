@@ -109,38 +109,34 @@ ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
 ```
 
 
-## Animated
+---
 
-```{r plot-gdp/usdrawYRS, animation.hook='gifski'}
+```{r plot-gdp/usdrawYRS, echo=FALSE, warning=FALSE, message=FALSE}
+
 
 big_mac_full_index$year = str_sub(big_mac_full_index$date,1,4)
 
 bigmac <- big_mac_full_index %>%
-  filter(year %in% c("2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"))
-  
-anim <- bigmac %>%  
+  filter(year %in% c("2012","2014","2016","2018","2020"))
+
+bigmac %>%
+  group_by(year) %>%
   ggplot(data = bigmac, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
   geom_point() +
-  ##transition_time(readr::parse_number(year)) +
+  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed",formula = y ~ x) +
   labs(
     x = "GDP per person (dollars)",
-    y = "Raw Index (dollars)", 
+    y = "Raw Index (dollars)",
     title = "",
-    ##subtitle = "Through Years: {as.integer(frame_time)}",
-    fill = "Countries"
+    subtitle = "Through the decade"
   ) +
   theme(
     legend.position = "none",
     panel.background = element_rect(fill = "white"),
     panel.grid = element_line(colour = "lightgrey"),
     plot.title = element_text(face = "bold")
-  )  
-
-
-##animate(anim, fps = 2, renderer = gifski_renderer())
-
-
-
+  )  +
+  facet_grid(year ~ .)
 
 ```
 
