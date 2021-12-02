@@ -9,7 +9,8 @@ editor_options:
 
 ```{r setup, include=FALSE}
 library(tidyverse)
-
+library(tidymodels)
+library(lubridate)
 ```
 
 ## R Markdown
@@ -18,11 +19,31 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r GDP- Dollar price}
+```{r Date - usd_raw}
 bigmac %>%
-  filter(name == "South Africa")%>%
-  ggplot(aes(x = date, y =))+
+  filter(name == "Turkey")%>%
+  ggplot(aes(x =date, y =usd_raw)) +
   geom_point()
+
+```
+
+```{r GDP- dollar price}
+bigmac_2016 <- bigmac %>%
+  filter(year(date) == "2016")
+bigmac %>%
+  filter(year(date) == "2016")%>%
+  ggplot(aes(x =gdp_dollar, y =dollar_price)) +
+  geom_point()
+
+```
+
+```{r linear model}
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(gdp_dollar ~ usd_raw,data = bigmac_2016)%>%
+  tidy()
+
 ```
 Possible countries:
 -Turkey

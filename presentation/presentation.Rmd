@@ -7,6 +7,8 @@ date: <font size = '6'>`r Sys.Date()`</font>
 output:
   revealjs::revealjs_presentation:
     self_contained: false
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r load-packages, include = FALSE}
@@ -129,7 +131,7 @@ glance(model)
 bigmac2011 <- big_mac_full_index %>%
   filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31"))
 
-ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
+ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
   geom_point() +
   theme_minimal() +
   geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed") +
@@ -175,7 +177,7 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
-animate(anim, fps = 2, renderer = gifski_renderer())
+#animate(anim, fps = 2, renderer = gifski_renderer())
 
 ```
 
