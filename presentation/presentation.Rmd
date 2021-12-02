@@ -40,13 +40,13 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 # The Big-mac Index Data {data-background-image="img/MacDonald.jpg"}
 
-<span style="color: yellow;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
+<span style="color: whitesmoke;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
 
-<span style="color: yellow;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
+<span style="color: whitesmoke;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
 
-<span style="color: yellow;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
+<span style="color: whitesmoke;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
 
-<span style="color: yellow;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
+<span style="color: whitesmoke;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
 
 ---
 
@@ -58,12 +58,12 @@ ls(big_mac_full_index)
 ```
 
 ---
+# Why Big Macs?
 
-Why Big Macs?
+<span style="color: violet;"> <font size='6'> - The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
 
-- The Big Mac Index is an accurate way of looking at PPP in the real world. 
-
-- A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
+<span style="color: violet;"> <font size='6'> - A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
+---
 
 # Sub-questions and how we will answer them
 
@@ -180,6 +180,7 @@ anim <- bigmac %>%
   )  
 
 animate(anim, fps = 2, renderer = gifski_renderer())
+
 
 ```
 
