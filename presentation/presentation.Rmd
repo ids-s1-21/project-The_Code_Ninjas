@@ -135,7 +135,7 @@ bigmac2011 <- big_mac_full_index %>%
 ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
   geom_point() +
   theme_minimal() +
-  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed") +
+  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed",formula = y ~ x) +
   labs(
     x = "GDP per person (dollars)",
     y = "Raw Index (dollars)",
@@ -224,7 +224,7 @@ bigmacSwitz <- bigmac %>%
   filter(name %in% c("Switzerland"))
 
 
-ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -252,7 +252,7 @@ bigmacHK <- bigmac %>%
   filter(name %in% c("Hong Kong"))
 
 
-ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -280,7 +280,7 @@ bigmacBrazil <- bigmac %>%
   filter(name %in% c("Brazil"))
 
 
-ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
