@@ -7,6 +7,8 @@ date: <font size = '6'>`r Sys.Date()`</font>
 output:
   revealjs::revealjs_presentation:
     self_contained: false
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r load-packages, include = FALSE}
@@ -24,6 +26,7 @@ library(gifski)
 ```{r setup, include=FALSE}
 # For better figure resolution
 knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618, out.width = "80%")
+suppressWarnings(expr)
 ```
 
 ```{r load-data, include=FALSE}
@@ -129,10 +132,10 @@ glance(model)
 bigmac2011 <- big_mac_full_index %>%
   filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31"))
 
-ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
+ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
   geom_point() +
   theme_minimal() +
-  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed") +
+  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed",formula = y ~ x) +
   labs(
     x = "GDP per person (dollars)",
     y = "Raw Index (dollars)",
@@ -179,20 +182,20 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
-animate(anim, fps = 2, renderer = gifski_renderer())
+#animate(anim, fps = 2, renderer = gifski_renderer())
 
 
 ```
 
 
 ## Turkey
-```{r plot-Turkey, warning=FALSE, echo=FALSE}
+```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
 bigmacTurkey <- bigmac %>%
   filter(name %in% c("Turkey"))
 
 
-ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -222,7 +225,7 @@ bigmacSwitz <- bigmac %>%
   filter(name %in% c("Switzerland"))
 
 
-ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -250,7 +253,7 @@ bigmacHK <- bigmac %>%
   filter(name %in% c("Hong Kong"))
 
 
-ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -278,7 +281,7 @@ bigmacBrazil <- bigmac %>%
   filter(name %in% c("Brazil"))
 
 
-ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
