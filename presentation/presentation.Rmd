@@ -121,6 +121,24 @@ glance(model)
 
 # Plots
 
+```{r plot-gdp/usdraw}
+
+bigmac <- big_mac_full_index %>%
+  filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31")) %>%
+  view()
+
+ggplot(data = bigmac, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
+  geom_point() +
+  theme_minimal()
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(USD_raw ~ GDP_dollar, data = bigmac) %>%
+  tidy()
+  
+
+```
+
 ```{r recode-species, echo = FALSE}
 # In this chunk I'm doing a bunch of analysis that I don't want to present 
 # in my slides. But I need the resulting data frame for a plot I want to present.
