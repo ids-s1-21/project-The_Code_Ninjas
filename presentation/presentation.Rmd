@@ -7,6 +7,8 @@ date: <font size = '6'>`r Sys.Date()`</font>
 output:
   revealjs::revealjs_presentation:
     self_contained: false
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r load-packages, include = FALSE}
@@ -26,6 +28,7 @@ library(gridExtra)
 ```{r setup, include=FALSE}
 # For better figure resolution
 knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618, out.width = "80%")
+suppressWarnings(expr)
 ```
 
 ```{r load-data, include=FALSE}
@@ -42,13 +45,13 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 # The Big-mac Index Data {data-background-image="img/MacDonald.jpg"}
 
-<span style="color: yellow;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
+<span style="color: whitesmoke;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span>
 
-<span style="color: yellow;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
+<span style="color: whitesmoke;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span>
 
-<span style="color: yellow;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
+<span style="color: whitesmoke;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span>
 
-<span style="color: yellow;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
+<span style="color: whitesmoke;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span>
 
 ---
 
@@ -60,12 +63,12 @@ ls(big_mac_full_index)
 ```
 
 ---
+# Why Big Macs?
 
-Why Big Macs?
+<span style="color: violet;"> <font size='6'> - The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
 
-- The Big Mac Index is an accurate way of looking at PPP in the real world. 
-
-- A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.
+<span style="color: violet;"> <font size='6'> - A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
+---
 
 # Sub-questions and how we will answer them
 
@@ -131,10 +134,10 @@ glance(model)
 bigmac2011 <- big_mac_full_index %>%
   filter(date >= as.Date("2011-01-01"), date <= as.Date("2011-12-31"))
 
-ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw, colour = name)) +
+ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
   geom_point() +
   theme_minimal() +
-  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed") +
+  geom_smooth(method = "lm", se = FALSE, colour = "grey", linetype = "dashed",formula = y ~ x) +
   labs(
     x = "GDP per person (dollars)",
     y = "Raw Index (dollars)",
@@ -183,19 +186,24 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
+<<<<<<< HEAD
 ##animate(anim, fps = 2, renderer = gifski_renderer())
+=======
+#animate(anim, fps = 2, renderer = gifski_renderer())
+
+>>>>>>> 0916246e5c0666b55c5c6362b1682c35921e44c8
 
 ```
 
 
 ## Turkey
-```{r plot-Turkey, warning=FALSE, echo=FALSE}
+```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
 bigmacTurkey <- bigmac %>%
   filter(name %in% c("Turkey"))
 
 
-ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -225,7 +233,7 @@ bigmacSwitz <- bigmac %>%
   filter(name %in% c("Switzerland"))
 
 
-ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -253,7 +261,7 @@ bigmacHK <- bigmac %>%
   filter(name %in% c("Hong Kong"))
 
 
-ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
@@ -281,7 +289,7 @@ bigmacBrazil <- bigmac %>%
   filter(name %in% c("Brazil"))
 
 
-ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"))) +
+ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, colour = "darkolivegreen3",  size = 2) +
