@@ -50,7 +50,7 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font>
 
- <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font>
+ <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represent crucial information related to the countries.</font>
 
 <font size='6'>The data is accountable for the years 2000-2021. </font>
 
