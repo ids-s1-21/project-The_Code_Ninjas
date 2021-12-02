@@ -19,6 +19,8 @@ library(knitr)
 library(revealjs)
 library(gganimate)
 library(gifski)
+library(grid)
+library(gridExtra)
 ```
 
 ```{r setup, include=FALSE}
