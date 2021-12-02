@@ -186,12 +186,11 @@ anim <- bigmac %>%
     plot.title = element_text(face = "bold")
   )  
 
-<<<<<<< HEAD
-##animate(anim, fps = 2, renderer = gifski_renderer())
-=======
-#animate(anim, fps = 2, renderer = gifski_renderer())
 
->>>>>>> 0916246e5c0666b55c5c6362b1682c35921e44c8
+##animate(anim, fps = 2, renderer = gifski_renderer())
+
+
+
 
 ```
 
