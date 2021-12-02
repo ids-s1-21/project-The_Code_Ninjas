@@ -249,6 +249,7 @@ like this
 <section>
 <section id="plots" class="title-slide slide level1">
 <h1>Plots</h1>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bigmac2011 <span class="ot">&lt;-</span> big_mac_full_index <span class="sc">%&gt;%</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">&quot;2011-01-01&quot;</span>), date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">&quot;2011-12-31&quot;</span>))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -274,11 +275,16 @@ like this
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;lm&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(USD_raw <span class="sc">~</span> GDP_dollar, <span class="at">data =</span> bigmac2011) <span class="sc">%&gt;%</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span></code></pre></div>
+=======
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="presentation_files/figure-revealjs/plot-gdp/usdraw-1.png" width="80%" height="100%" /></p>
+>>>>>>> 1783b9616b4a56775b9a09b98412e8a91364765a
 <pre><code>## # A tibble: 2 × 5
 ##   term          estimate  std.error statistic     p.value
 ##   &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
 ## 1 (Intercept) -0.360     0.0664         -5.42 0.00000446 
 ## 2 GDP_dollar   0.0000140 0.00000211      6.64 0.000000112</code></pre>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>big_mac_full_index<span class="sc">$</span>year <span class="ot">=</span> <span class="fu">str_sub</span>(big_mac_full_index<span class="sc">$</span>date,<span class="dv">1</span>,<span class="dv">4</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>bigmac <span class="ot">&lt;-</span> big_mac_full_index <span class="sc">%&gt;%</span></span>
@@ -403,6 +409,81 @@ like this
 <pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
 ## the group aesthetic?</code></pre>
 <p><img src="presentation_files/figure-revealjs/plot-Brazil-1.png" width="80%" /></p>
+=======
+</section>
+<section id="animated" class="slide level2">
+<h2>Animated</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>big_mac_full_index<span class="sc">$</span>year <span class="ot">=</span> <span class="fu">str_sub</span>(big_mac_full_index<span class="sc">$</span>date,<span class="dv">1</span>,<span class="dv">4</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>bigmac <span class="ot">&lt;-</span> big_mac_full_index <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;2011&quot;</span>,<span class="st">&quot;2012&quot;</span>,<span class="st">&quot;2013&quot;</span>,<span class="st">&quot;2014&quot;</span>,<span class="st">&quot;2015&quot;</span>,<span class="st">&quot;2016&quot;</span>,<span class="st">&quot;2017&quot;</span>,<span class="st">&quot;2018&quot;</span>,<span class="st">&quot;2019&quot;</span>,<span class="st">&quot;2020&quot;</span>,<span class="st">&quot;2021&quot;</span>))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>anim <span class="ot">&lt;-</span> bigmac <span class="sc">%&gt;%</span>  </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> bigmac, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> GDP_dollar, <span class="at">y =</span> USD_raw, <span class="at">colour =</span> name)) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="do">##transition_time(readr::parse_number(year)) +</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;GDP per person (dollars)&quot;</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Raw Index (dollars)&quot;</span>, </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">##subtitle = &quot;Through Years: {as.integer(frame_time)}&quot;,</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Countries&quot;</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;lightgrey&quot;</span>),</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  )  </span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="do">##animate(anim, fps = 2, renderer = gifski_renderer())</span></span></code></pre></div>
+</section>
+<section id="turkey" class="slide level2">
+<h2>Turkey</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>bigmacTurkey <span class="ot">&lt;-</span> bigmac <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Turkey&quot;</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bigmacTurkey, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> USD_raw, <span class="at">colour =</span> <span class="fu">ifelse</span>(USD_raw <span class="sc">&gt;</span><span class="dv">0</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>))) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">&quot;darkolivegreen3&quot;</span>,  <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>),</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;lightgrey&quot;</span>),</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">&quot;hotpink&quot;</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Date&quot;</span>,</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Raw Index (dollars)&quot;</span>,</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Change in the Raw Index over time&quot;</span>,</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Biannually for Turkey 2011-2021&quot;</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="presentation_files/figure-revealjs/plot-Turkey-1.png" width="80%" /></p>
+</section>
+<section id="switzerland" class="slide level2">
+<h2>Switzerland</h2>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="presentation_files/figure-revealjs/plot-Switzerland-1.png" width="80%" /></p>
+</section>
+<section id="hong-kong" class="slide level2">
+<h2>Hong Kong</h2>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="presentation_files/figure-revealjs/plot-HongKong-1.png" width="80%" /></p>
+</section>
+<section id="brazil" class="slide level2">
+<h2>Brazil</h2>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="presentation_files/figure-revealjs/plot-Brazil-1.png" width="100%" /></p>
+>>>>>>> 1783b9616b4a56775b9a09b98412e8a91364765a
 <p><img src="presentation_files/figure-revealjs/plot-iris-1.png" width="80%" /></p>
 </section>
 <section id="plot-and-text" class="slide level2">
