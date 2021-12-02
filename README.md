@@ -37,6 +37,9 @@ Our presentation can be found [here](presentation/presentation.html).
 
 ## Data
 
+GitHub. 2021. GitHub - TheEconomist/big-mac-data: Data and methodology for the Big Mac index. [online] Available at: <https://github.com/TheEconomist/big-mac-data> [Accessed 2 December 2021].
+[Retrieval Date 22 October 2021].
+
 Include a citation for your data here. See
 <http://libraryguides.vu.edu.au/c.php?g=386501&p=4347840> for guidance
 on proper citation for datasets. If you got your data off the web, make
