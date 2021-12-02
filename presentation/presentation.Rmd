@@ -77,8 +77,13 @@ ls(big_mac_full_index)
 
 
 # Plots
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
 
-
+:::: column
 ```{r plot-gdp/usdraw, echo = FALSE, warning=FALSE, out.height="100%", fig.height=5, message=FALSE}
 
 bigmac2011 <- big_mac_full_index %>%
@@ -107,7 +112,8 @@ ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
 
 
 ```
-
+::::
+:::
 
 ## Animated
 
@@ -292,7 +298,8 @@ ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse
   )
 
 ```
-
+::::
+:::
 
 
 # Feeling adventurous?
