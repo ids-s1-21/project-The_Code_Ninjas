@@ -40,7 +40,7 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 
 # <span style="color: yellowgreen;"> What is Purchasing Power Parity? </span> {data-background-image="img/Blue gradient.jpg"}
 
-<span style="color: snow;"> <font size='6'> PPP stands for Purchasing Power Parity</font></span>
+<span style="color: snow;"> <font size='6'> PPP stands for Purchasing Power Parity.</font></span>
 
 <span style="color: snow;"> <font size='6'> It is a measurement used in economics to compare the purchasing power of different currencies in common units. </font></span>
 
