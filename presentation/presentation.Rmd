@@ -191,6 +191,13 @@ anim <- bigmac %>%
 
 
 ## Turkey
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
 bigmacTurkey <- bigmac %>%
@@ -219,8 +226,17 @@ ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse
 
 
 ```
+::::
+:::
 
-## Switzerland
+## Switzerland 
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Switzerland, echo=FALSE, warning=FALSE}
 
 bigmacSwitz <- bigmac %>%
@@ -247,8 +263,17 @@ ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(
   )
 
 ```
+::::
+:::
 
 ## Hong Kong
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-HongKong, echo=FALSE, warning=FALSE}
 
 bigmacHK <- bigmac %>%
@@ -275,8 +300,17 @@ ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD
   )
 
 ```
+::::
+:::
 
 ## Brazil
+::: columns
+:::: column
+* Test 1
+* Test 2
+::::
+
+:::: column
 ```{r plot-Brazil, warning=FALSE, out.width="100%", echo=FALSE}
 
 bigmacBrazil <- bigmac %>%
@@ -303,60 +337,9 @@ ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse
   )
 
 ```
-
-```{r recode-species, echo = FALSE}
-# In this chunk I'm doing a bunch of analysis that I don't want to present 
-# in my slides. But I need the resulting data frame for a plot I want to present.
-iris_modified <- iris %>%
-  mutate(Species = fct_other(Species, keep = "setosa"))
-```
-
-```{r plot-iris, echo = FALSE}
-# Code hidden with echo = FALSE
-# Uses modified iris dataset from previous chunk
-# Play around with height and width until you're happy with the look
-ggplot(data = iris_modified, mapping = aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
-  geom_point() + 
-  theme_minimal() # theme options: https://ggplot2.tidyverse.org/reference/ggtheme.html
-```
-
-## Plot and text
-
-::: columns
-:::: column
-* Some text
-* goes here
-::::
-
-:::: column
-```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
-# see how I changed out.width and fig.width from defaults
-# to make the figure bigger
-ggplot(penguins, aes(x = bill_length_mm, y = species, color = species)) +
-  geom_boxplot() +
-  theme_minimal()
-```
 ::::
 :::
 
-## Different widths
-
-::: columns
-:::: {.column width="40%"}
-* Some text
-* goes here
-::::
-
-:::: {.column width="60%"}
-```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
-# see how I changed out.width and fig.width from defaults
-# to make the figure bigger
-ggplot(penguins, aes(x = bill_length_mm, y = species, color = species)) +
-  geom_boxplot() +
-  theme_minimal()
-```
-::::
-:::
 
 # Tables
 
