@@ -144,22 +144,20 @@
 <h2 data-background-image="img/Global-Economy-4.jpg"><span style="color: turquoise;"> A statement of the overall goal / research question </span></h2>
 <p><span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span></p>
 </section>
-<section id="what-is-purchasing-power-parity" class="title-slide slide level1">
-<h1>What is Purchasing Power Parity?</h1>
-<ul>
-<li>PPP stands for Purchasing Power Parity</li>
-<li>It is a measurement used in economics to compare the purchasing power of different currencies in common units.</li>
-<li>In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</li>
-</ul>
+<section id="what-is-purchasing-power-parity" class="title-slide slide level1" data-background-image="img/Blue gradient.jpg">
+<h1 data-background-image="img/Blue gradient.jpg"><span style="color: yellowgreen;"> What is Purchasing Power Parity? </span></h1>
+<p><span style="color: snow;"> <font size='6'> PPP stands for Purchasing Power Parity</font></span></p>
+<p><span style="color: snow;"> <font size='6'> It is a measurement used in economics to compare the purchasing power of different currencies in common units. </font></span></p>
+<p><span style="color: snow;"> <font size='6'> In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</font></span></p>
 </section>
 
 <section>
-<section id="the-big-mac-index-data" class="title-slide slide level1" data-background-image="img/MacDonald.jpg">
-<h1 data-background-image="img/MacDonald.jpg">The Big-mac Index Data</h1>
-<p><span style="color: whitesmoke;"> <font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></span></p>
-<p><span style="color: whitesmoke;"> <font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></span></p>
-<p><span style="color: whitesmoke;"> <font size='6'>The data is accountable for the years 2000-2021. </font></span></p>
-<p><span style="color: whitesmoke;"> <font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></span></p>
+<section id="the-big-mac-index-data" class="title-slide slide level1" data-background-image="img/Burger2.jpg">
+<h1 data-background-image="img/Burger2.jpg"><span style="color: royalblue;"> The Big-mac Index Data</span></h1>
+<p><font size='6'> The dataset consists of 1,520 observations (rows) and 19 variables (columns).</font></p>
+<p><font size='6'>Each row represents a country at a specific time (year-month-date) while the columns represents crucial information related to the countries.</font></p>
+<p><font size='6'>The data is accountable for the years 2000-2021. </font></p>
+<p><font size='6'>The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.</font></p>
 </section>
 <section class="slide level2">
 
@@ -171,6 +169,7 @@
 ##  [9] &quot;EUR_raw&quot;       &quot;GBP_adjusted&quot;  &quot;GBP_raw&quot;       &quot;GDP_dollar&quot;   
 ## [13] &quot;iso_a3&quot;        &quot;JPY_adjusted&quot;  &quot;JPY_raw&quot;       &quot;local_price&quot;  
 ## [17] &quot;name&quot;          &quot;USD_adjusted&quot;  &quot;USD_raw&quot;</code></pre>
+<<<<<<< HEAD
 <table style="width:6%;">
 <colgroup>
 <col style="width: 5%" />
@@ -187,7 +186,15 @@
 </tr>
 </tbody>
 </table>
+=======
+>>>>>>> 579cc8ae9bd9da928caee3725d2948bf5638d5c1
 </section></section>
+<section id="why-big-macs" class="title-slide slide level1" data-background-image="img/Yellow gradient.jpg">
+<h1 data-background-image="img/Yellow gradient.jpg"><span style="color: seagreen;"> Why Big Macs?</span></h1>
+<p><span style="color: darkviolet;"> <font size='6'> The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span></p>
+<p><span style="color: darkviolet;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span></p>
+</section>
+
 <section>
 <section id="sub-questions-and-how-we-will-answer-them" class="title-slide slide level1">
 <h1>Sub-questions and how we will answer them</h1>
@@ -261,6 +268,7 @@ like this
 </section>
 <section id="animated" class="slide level2">
 <h2>Animated</h2>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>big_mac_full_index<span class="sc">$</span>year <span class="ot">=</span> <span class="fu">str_sub</span>(big_mac_full_index<span class="sc">$</span>date,<span class="dv">1</span>,<span class="dv">4</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>bigmac <span class="ot">&lt;-</span> big_mac_full_index <span class="sc">%&gt;%</span></span>
@@ -286,6 +294,32 @@ like this
 <span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="do">##animate(anim, fps = 2, renderer = gifski_renderer())</span></span></code></pre></div>
+=======
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>big_mac_full_index<span class="sc">$</span>year <span class="ot">=</span> <span class="fu">str_sub</span>(big_mac_full_index<span class="sc">$</span>date,<span class="dv">1</span>,<span class="dv">4</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>bigmac <span class="ot">&lt;-</span> big_mac_full_index <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;2011&quot;</span>,<span class="st">&quot;2012&quot;</span>,<span class="st">&quot;2013&quot;</span>,<span class="st">&quot;2014&quot;</span>,<span class="st">&quot;2015&quot;</span>,<span class="st">&quot;2016&quot;</span>,<span class="st">&quot;2017&quot;</span>,<span class="st">&quot;2018&quot;</span>,<span class="st">&quot;2019&quot;</span>,<span class="st">&quot;2020&quot;</span>,<span class="st">&quot;2021&quot;</span>))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>anim <span class="ot">&lt;-</span> bigmac <span class="sc">%&gt;%</span>  </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> bigmac, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> GDP_dollar, <span class="at">y =</span> USD_raw, <span class="at">colour =</span> name)) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(readr<span class="sc">::</span><span class="fu">parse_number</span>(year)) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;GDP per person (dollars)&quot;</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Raw Index (dollars)&quot;</span>, </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Through Years: {as.integer(frame_time)}&quot;</span>,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Countries&quot;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>),</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;lightgrey&quot;</span>),</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  )  </span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#animate(anim, fps = 2, renderer = gifski_renderer())</span></span></code></pre></div>
+>>>>>>> 579cc8ae9bd9da928caee3725d2948bf5638d5c1
 </section>
 <section id="turkey" class="slide level2">
 <h2>Turkey</h2>
