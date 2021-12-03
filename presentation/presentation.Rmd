@@ -63,7 +63,6 @@ ls(big_mac_full_index)
 
 ```
 
-
 # <span style="color: seagreen;"> Why Big Macs?</span> {data-background-image="img/Yellow gradient.jpg"}
 
 <span style="color: darkviolet;"> <font size='6'> The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
