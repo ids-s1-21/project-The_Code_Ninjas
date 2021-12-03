@@ -38,13 +38,13 @@ big_mac_full_index = read.csv(file = "/cloud/project/data/big-mac-data-2021-07.1
 ## <span style="color: turquoise;"> A statement of the overall goal / research question </span>  {data-background-image="img/Global-Economy-4.jpg"}
 <span style="color: yellow;"> <font size='7'> Our research question is “What is Purchasing Power Parity (PPP) and how has it changed over the years across countries?” </font> </span>
 
-# <span style="color: yellowgreen;"> What is Purchasing Power Parity? </span> {data-background-image="img/Blue gradient.jpg"}
+# <span style="color: yellowgreen;"> What is Purchasing Power Parity? </span> {data-background-image="img/World.jpg"}
 
-<span style="color: snow;"> <font size='6'> PPP stands for Purchasing Power Parity.</font></span>
+<span style="color: gold;"> <font size='6'> PPP stands for Purchasing Power Parity.</font></span>
 
-<span style="color: snow;"> <font size='6'> It is a measurement used in economics to compare the purchasing power of different currencies in common units. </font></span>
+<span style="color: gold;"> <font size='6'> It is a measurement used in economics to compare the purchasing power of different currencies in common units. </font></span>
 
-<span style="color: snow;"> <font size='6'> In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</font></span>
+<span style="color: gold;"> <font size='6'> In theory, PPP should be equal to the exchange rate of these two countries, but in practice this is not the case.</font></span>
 
 # <span style="color: royalblue;"> The Big-mac Index Data</span> {data-background-image="img/Burger2.jpg"}
 
@@ -65,11 +65,15 @@ ls(big_mac_full_index)
 
 ```
 
+<<<<<<< HEAD
 # <span style="color: seagreen;"> Why Big Macs?</span> {data-background-image="img/Yellow gradient.jpg"}
+=======
 
-<span style="color: darkviolet;"> <font size='6'> The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
+# <span style="color: yellow;"> Why Big Macs?</span> {data-background-image="img/Brown-Burger.jpg"}
 
-<span style="color: darkviolet;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
+<span style="color: snow;"> <font size='6'> The Big Mac Index is an accurate way of looking at PPP in the real world. </font></span>
+
+<span style="color: snow;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
 
 # <span style="color: gold;"> Analysis of PPP</span> {data-background-image="img/Solar.jpg"}
 
