@@ -33,7 +33,7 @@ your project.
 
 ## Presentation
 
-Our presentation can be found [here](presentation/presentation.html).
+Our presentation can be found at [https://media.ed.ac.uk/media/IDS+Video+Presentation/1_lmru8ksw](presentation/presentation.html).
 
 ## Data
 
