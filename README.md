@@ -46,3 +46,5 @@ GitHub. 2021. GitHub - TheEconomist/big-mac-data: Data and methodology for the B
 The Economist. 2021. The Big Mac index. [online] Available at: <https://www.economist.com/big-mac-index> [Accessed 2 December 2021].[Retrieval Date 22 October 2021].
 
 GitHub. 2021. GitHub - TheEconomist/big-mac-data: Data and methodology for the Big Mac index. [online] Available at: <https://github.com/TheEconomist/big-mac-data> [Accessed 2 December 2021]. [Retrieval Date 22 October 2021].
+
+Yihui Xie, G., 2021. 13.3 Using a template | R Markdown: The Definitive Guide. [online] Bookdown.org. Available at: <https://bookdown.org/yihui/rmarkdown/rticles-usage.html> [Accessed 2 December 2021].
