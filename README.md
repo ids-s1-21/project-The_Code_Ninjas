@@ -22,7 +22,6 @@ Hong Kong is a high GDP country so it would be expected that the Hong Kong dolla
 
 Brazil is a relatively low GDP country and Brazil’s PPP has varied from 2000 -2021 but in the period of 2006 to 2014 brazil had high levels of PPP. This was due to Brazil being one of the fastest growing economies in the world which huge levels of investor confidence. However, this fell after 2014 when Brazil experienced one of its worst recorded recessions in the countries history due to falling comodity prices and an internal political struggle which shook investor confidence. We could hypothesise from our knowledge of PPP and our initial plot that there is a positive correlation between PPP and GDP.
 
-
 We had expected low income countries to have a lower PPP and this was certainly the case for Turkey and Brazil, which both saw reduced PPP in periods of economic struggle and reduced GDP.
 
 We had also expected high income countries to have higher PPP and Switzerland supported this, which as a high GDP country has had consistently high PPP. However Hong Kong showed us that the opposite was the case, and we discovered they had a low PPP despite their high GDP. 
