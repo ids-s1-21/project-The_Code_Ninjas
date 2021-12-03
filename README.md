@@ -39,13 +39,10 @@ Our presentation can be found [here](presentation/presentation.html).
 
 The Economist. 2021. The Big Mac index. [online] Available at: <https://www.economist.com/big-mac-index> [Accessed 2 December 2021].[Retrieval Date 22 October 2021].
 
-
-Include a citation for your data here. See
-<http://libraryguides.vu.edu.au/c.php?g=386501&p=4347840> for guidance
-on proper citation for datasets. If you got your data off the web, make
-sure to note the retrieval date.
+GitHub. 2021. GitHub - TheEconomist/big-mac-data: Data and methodology for the Big Mac index. [online] Available at: <https://github.com/TheEconomist/big-mac-data> [Accessed 2 December 2021]. [Retrieval Date 22 October 2021].
 
 ## References
 
-List any references here. You should, at a minimum, list your data
-source.
+The Economist. 2021. The Big Mac index. [online] Available at: <https://www.economist.com/big-mac-index> [Accessed 2 December 2021].[Retrieval Date 22 October 2021].
+
+GitHub. 2021. GitHub - TheEconomist/big-mac-data: Data and methodology for the Big Mac index. [online] Available at: <https://github.com/TheEconomist/big-mac-data> [Accessed 2 December 2021]. [Retrieval Date 22 October 2021].
