@@ -1,6 +1,6 @@
 The Big-mac Index and the Purchasing Power Parity
 ================
-The Code Ninjas
+The Code Ninjas (Tuilelaith, Dara, Kay Thari, Anya)
 
 ## Summary
 
@@ -8,7 +8,7 @@ The aim of the project is to find out “What is Purchasing Power Parity (PPP) a
 
 The Big-Mac Index dataset consists of 1,520 observations (rows) and 19 variables (columns). Each row represents a country at a specific time (year-month-date) while the columns represent crucial information related to the countries. The data is only accountable for the years 2000-2021.
 
-The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports.
+The Big Mac prices are from McDonald’s, and the exchange rates are from Thomson Reuters. The GDP per person data is from the IMF World Economic Outlook reports and the overall data is from The Economist.
 
 The Big Mac Index is used as it would be an accurate way of looking at the PPP in the real world since the burger would be the same and hold the same intrinsic value no matter what country it is in.
 
@@ -28,7 +28,6 @@ We had also expected high income countries to have higher PPP and Switzerland su
  Overall this has meant that there is some evidence of a correlation between GDP and PPP, as we expected. However in our research we discovered a counterexample, where factors such as economic policy provide an explanation. We need to consider that economic policies vary across countries, impacting prices of Big Macs across countries affecting PPP as calculated from this data, as well as the exchange rate. 
 
 Therefore, we can conclude that GDP is not always an explanation for why PPP may be higher or lower, but it certainly has a contribution.
-
 
 ## Presentation
 
