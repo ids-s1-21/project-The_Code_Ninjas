@@ -71,12 +71,13 @@ ls(big_mac_full_index)
 
 <span style="color: darkviolet;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
 
-# <span style="color: royalblue;"> Analysis of PPP</span> {data-background-image="img/Burger2.jpg"}
-<font size='6'>One of the common assumptions surrounding PPP is that a lower income country will have 
-on average, lower prices compared to a high income country. This would be due to lower
-labour costs and an overall inability to afford more costly goods in a low income economy.This will mean that a person in a low income economy will be able to buy less
-in a high income economy than they could before. This would therefore give us the impression that PPP is lower in low income economies than in high income economies.</font>
+# <span style="color: gold;"> Analysis of PPP</span> {data-background-image="img/Solar.jpg"}
 
+<span style="color: turquoise;"><font size='6'>One of the common assumptions surrounding PPP is that a lower income country will on average, have lower prices compared to a high income country.</font></span>
+
+<span style="color: turquoise;"><font size='6'>This could be due to lower labour costs and an overall inability to afford more costly goods in a low income economy. This will mean that a person in a low income economy will be able to buy less in a high income economy than they could before.</font></span>
+
+<span style="color: turquoise;"><font size='6'>This would therefore give us the impression that PPP is lower in low income economies than in high income economies.</font></span>
 
 
 # Plots - PPP by GDP per capita
