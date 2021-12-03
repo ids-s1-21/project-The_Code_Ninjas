@@ -71,13 +71,26 @@ ls(big_mac_full_index)
 
 <span style="color: darkviolet;"> <font size='6'> A Big Mac is going to be the same and hold the same intrinsic value no matter what country it is in, and so it is a good product to compare the currencies across countries.</font></span>
 
-# Sub-questions and how we will answer them
+# <span style="color: royalblue;"> Analysis of PPP</span> {data-background-image="img/Burger2.jpg"}
+<font size='6'>One of the common assumptions surrounding PPP is that a lower income country will have 
+on average, lower prices compared to a high income country. This would be due to lower
+labour costs and an overall inability to afford more costly goods in a low income economy.This will mean that a person in a low income economy will be able to buy less
+in a high income economy than they could before. This would therefore give us the impression that PPP is lower in low income economies than in high income economies.</font>
 
 
 
-# Plots
+# Plots - PPP by GDP per capita
+::: columns
+:::: column
+
+- <font size='5'> The assumption that PPP is higher in high income countries is supported by this graph. Raw Index shows how overvalued/undervalued a countries currency is compared to the big mac price in each country.</font>
+
+- <font size='5'> Effectively a country with a highly overvalued currency will have a high PPP and a country with a highly undervalued currency will have a low PPP.</font>
 
 
+::::
+
+:::: column
 ```{r plot-gdp/usdraw, echo = FALSE, warning=FALSE, out.height="100%", fig.height=5, message=FALSE}
 
 bigmac2011 <- big_mac_full_index %>%
@@ -106,7 +119,8 @@ ggplot(data = bigmac2011, mapping = aes(x = GDP_dollar, y = USD_raw )) +
 
 
 ```
-
+::::
+:::
 
 ---
 
@@ -143,15 +157,18 @@ bigmac %>%
 ## Turkey
 ::: columns
 :::: column
-* Test 1
-* Test 2
+- <font size='5'>High rates of GDP growth till 2007 with greater investor confidence.</font>
+
+- <font size='5'>Post 2008, industry declined and led to higher levels of inflation and a reduction in imports, all of this led to the Lira fall in value up till 2021</font>
+
+- <font size='5'>This would support the assumption that PPP is lower in low income economies as effective PPP fell along with GDP.</font>
 ::::
 
 :::: column
 ```{r plot-Turkey, warning=FALSE, echo=FALSE, eval=TRUE}
 
-bigmacTurkey <- bigmac %>%
-  filter(name %in% c("Turkey"))
+bigmacTurkey <- big_mac_full_index %>%
+  filter(name == "Turkey")
 
 
 ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD_raw >0, "red", "blue"), group = 1)) +
@@ -170,7 +187,7 @@ ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse
     x = "Date",
     y = "Raw Index (dollars)",
     title = "Change in the Raw Index over time",
-    subtitle = "Biannually for Turkey 2011-2021"
+    subtitle = "Biannually for Turkey 2000-2021"
   )
 
 
@@ -189,7 +206,7 @@ ggplot(data = bigmacTurkey, mapping = aes(x = date, y = USD_raw, colour = ifelse
 :::: column
 ```{r plot-Switzerland, echo=FALSE, warning=FALSE}
 
-bigmacSwitz <- bigmac %>%
+bigmacSwitz <- big_mac_full_index %>%
   filter(name %in% c("Switzerland"))
 
 
@@ -209,7 +226,7 @@ ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(
     x = "Date",
     y = "Raw Index (dollars)",
     title = "Change in the Raw Index over time",
-    subtitle = "Biannually for Switzerland 2011-2021"
+    subtitle = "Biannually for Switzerland 2000-2021"
   )
 
 ```
@@ -226,7 +243,7 @@ ggplot(data = bigmacSwitz, mapping = aes(x = date, y = USD_raw, colour = ifelse(
 :::: column
 ```{r plot-HongKong, echo=FALSE, warning=FALSE}
 
-bigmacHK <- bigmac %>%
+bigmacHK <- big_mac_full_index %>%
   filter(name %in% c("Hong Kong"))
 
 
@@ -246,7 +263,7 @@ ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD
     x = "Date",
     y = "Raw Index (dollars)",
     title = "Change in the Raw Index over time",
-    subtitle = "Biannually for Hong Kong 2011-2021"
+    subtitle = "Biannually for Hong Kong 2000-2021"
   )
 
 ```
@@ -263,7 +280,7 @@ ggplot(data = bigmacHK, mapping = aes(x = date, y = USD_raw, colour = ifelse(USD
 :::: column
 ```{r plot-Brazil, warning=FALSE, out.width="100%", echo=FALSE}
 
-bigmacBrazil <- bigmac %>%
+bigmacBrazil <- big_mac_full_index %>%
   filter(name %in% c("Brazil"))
 
 
@@ -283,11 +300,12 @@ ggplot(data = bigmacBrazil, mapping = aes(x = date, y = USD_raw, colour = ifelse
     x = "Date",
     y = "Raw Index (dollars)",
     title = "Change in the Raw Index over time",
-    subtitle = "Biannually for Brazil 2011-2021"
+    subtitle = "Biannually for Brazil 2000-2021"
   )
 
 ```
-
+::::
+:::
 
 
 # Feeling adventurous?
